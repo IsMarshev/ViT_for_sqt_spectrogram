@@ -1,0 +1,65 @@
+data_path: "datasets"
+file_extension: "npy"
+save_model_path: "models"
+debug: True
+progress_bar: True
+device: "cuda:0"
+num_channels: 1
+
+train:
+  dataset_path: "datasets/train/"
+  mixed_precision: False
+  num_classes: 39535
+  triplet_margin: 0.2
+  smooth_factor: 0.1
+  dropout: 0.1
+  model_ckpt: null
+  batch_size: 64
+  num_workers: 0
+  shuffle: True
+  drop_last: True
+  epochs: 25
+  learning_rate: 0.0003
+  patience: 4
+  log_steps: 10
+
+pretrain:
+  dataset_path: "datasets/train/"
+  save_path: "../models_chkpnt/pretrain/"
+  dropout: 0.1
+  max_len: 84
+  patch_size: 12
+  num_channels: 1
+  encoder_stride: 12
+  accumulation_step: 16
+  model_ckpt: null
+  batch_size: 64
+  num_workers: 0
+  shuffle: True
+  drop_last: True
+  epochs: 25
+  learning_rate: 0.0003
+  patience: 4
+  log_steps: 10
+
+val:
+  dataset_path: "datasets/train/"
+  save_val_outputs: True
+  max_seq_len: -1
+  batch_size: 100
+  num_workers: 0
+  shuffle: False
+  drop_last: False
+  output_dir: "outputs_val"
+
+test:
+  dataset_path: "datasets/test/"
+  save_test_outputs: True
+  #model_ckpt: "/home/singleton/cover_detection_contest_2024/bytecover/outputs_val/run-0/model/best-model-epoch=6-max_secs=50.pt"
+  model_ckpt: null
+  max_seq_len: -1
+  batch_size: 1
+  num_workers: 0
+  shuffle: False
+  drop_last: False
+  output_dir: "outputs_test"

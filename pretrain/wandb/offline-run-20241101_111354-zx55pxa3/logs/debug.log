@@ -1,0 +1,48 @@
+2024-11-01 11:13:54,788 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Current SDK version is 0.15.3
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Configure stats pid to 21872
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Loading settings from C:\Users\imars\.config\wandb\settings
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Loading settings from c:\Users\imars\OneDrive\Рабочий стол\projects\yandex_cup\pretrain\wandb\settings
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_init.py:_log_setup():507] Logging user logs to c:\Users\imars\OneDrive\Рабочий стол\projects\yandex_cup\pretrain\wandb\offline-run-20241101_111354-zx55pxa3\logs\debug.log
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_init.py:_log_setup():508] Logging internal logs to c:\Users\imars\OneDrive\Рабочий стол\projects\yandex_cup\pretrain\wandb\offline-run-20241101_111354-zx55pxa3\logs\debug-internal.log
+2024-11-01 11:13:54,789 INFO    MainThread:21872 [wandb_init.py:_jupyter_setup():453] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001D751A30B20>
+2024-11-01 11:13:54,790 INFO    MainThread:21872 [wandb_init.py:init():547] calling init triggers
+2024-11-01 11:13:54,790 INFO    MainThread:21872 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'epochs': 10, 'batch_size': 32}
+2024-11-01 11:13:54,790 INFO    MainThread:21872 [wandb_init.py:init():596] starting backend
+2024-11-01 11:13:54,790 INFO    MainThread:21872 [wandb_init.py:init():600] setting up manager
+2024-11-01 11:13:54,796 INFO    MainThread:21872 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2024-11-01 11:13:54,803 INFO    MainThread:21872 [wandb_init.py:init():606] backend started and connected
+2024-11-01 11:13:54,808 INFO    MainThread:21872 [wandb_run.py:_label_probe_notebook():1238] probe notebook
+2024-11-01 11:13:54,809 INFO    MainThread:21872 [wandb_run.py:_label_probe_notebook():1248] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-11-01 11:13:54,809 INFO    MainThread:21872 [wandb_init.py:init():700] updated telemetry
+2024-11-01 11:13:54,810 INFO    MainThread:21872 [wandb_init.py:init():787] starting run threads in backend
+2024-11-01 11:13:54,938 INFO    MainThread:21872 [wandb_run.py:_console_start():2158] atexit reg
+2024-11-01 11:13:54,938 INFO    MainThread:21872 [wandb_run.py:_redirect():2013] redirect: SettingsConsole.WRAP_RAW
+2024-11-01 11:13:54,938 INFO    MainThread:21872 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2024-11-01 11:13:54,939 INFO    MainThread:21872 [wandb_run.py:_redirect():2103] Redirects installed.
+2024-11-01 11:13:54,939 INFO    MainThread:21872 [wandb_init.py:init():829] run started, returning control to user process
+2024-11-01 11:16:34,854 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Current SDK version is 0.15.3
+2024-11-01 11:16:34,855 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Configure stats pid to 21872
+2024-11-01 11:16:34,855 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Loading settings from C:\Users\imars\.config\wandb\settings
+2024-11-01 11:16:34,855 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Loading settings from c:\Users\imars\OneDrive\Рабочий стол\projects\yandex_cup\pretrain\wandb\settings
+2024-11-01 11:16:34,855 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-11-01 11:16:34,855 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-11-01 11:16:34,855 INFO    MainThread:21872 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-11-01 11:16:34,856 INFO    MainThread:21872 [wandb_init.py:_log_setup():507] Logging user logs to c:\Users\imars\OneDrive\Рабочий стол\projects\yandex_cup\pretrain\wandb\offline-run-20241101_111634-rm9ikght\logs\debug.log
+2024-11-01 11:16:34,856 INFO    MainThread:21872 [wandb_init.py:_log_setup():508] Logging internal logs to c:\Users\imars\OneDrive\Рабочий стол\projects\yandex_cup\pretrain\wandb\offline-run-20241101_111634-rm9ikght\logs\debug-internal.log
+2024-11-01 11:16:34,856 INFO    MainThread:21872 [wandb_init.py:init():547] calling init triggers
+2024-11-01 11:16:34,856 INFO    MainThread:21872 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'epochs': 10, 'batch_size': 32}
+2024-11-01 11:16:34,856 INFO    MainThread:21872 [wandb_init.py:init():571] re-initializing run, found existing run on stack: zx55pxa3
+2024-11-01 11:16:34,858 INFO    MainThread:21872 [wandb_run.py:_finish():1893] finishing run local_user/local_project/zx55pxa3
+2024-11-01 11:16:34,859 INFO    MainThread:21872 [jupyter.py:save_history():445] not saving jupyter history
+2024-11-01 11:16:34,859 INFO    MainThread:21872 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-11-01 11:16:34,859 INFO    MainThread:21872 [wandb_init.py:_jupyter_teardown():435] cleaning up jupyter logic
+2024-11-01 11:16:34,859 INFO    MainThread:21872 [wandb_run.py:_atexit_cleanup():2127] got exitcode: 0
+2024-11-01 11:16:34,859 INFO    MainThread:21872 [wandb_run.py:_restore():2110] restore
+2024-11-01 11:16:34,859 INFO    MainThread:21872 [wandb_run.py:_restore():2116] restore done
+2024-11-01 11:16:35,965 INFO    MainThread:21872 [wandb_run.py:_footer_history_summary_info():3469] rendering history
+2024-11-01 11:16:35,965 INFO    MainThread:21872 [wandb_run.py:_footer_history_summary_info():3501] rendering summary
