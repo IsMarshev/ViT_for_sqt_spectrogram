@@ -14,7 +14,7 @@ train:
   smooth_factor: 0.1
   dropout: 0.1
   model_ckpt: null
-  batch_size: 64
+  batch_size: 128
   num_workers: 0
   shuffle: True
   drop_last: True

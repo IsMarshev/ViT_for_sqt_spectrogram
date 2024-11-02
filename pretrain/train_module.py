@@ -124,10 +124,10 @@ class TrainModule:
 
             # Log training loss to W&B
             if step % self.config["train"]["log_steps"] == 0:
+                current_lr = self.scheduler.get_last_lr()[0]
                 wandb.log({
                     "train_loss_step": train_step["train_loss_step"],
-                    "step": step,
-                    "epoch": self.postfix["Epoch"]
+                    "scheduler_lr": current_lr
                 })
                 save_logs(
                     dict(
@@ -147,7 +147,7 @@ class TrainModule:
         wandb.log({"train_loss_epoch": self.postfix["train_loss"], "epoch": self.postfix["Epoch"]})
 
         self.validation_procedure()
-        self.overfit_check()
+
         self.pbar.set_postfix({k: self.postfix[k] for k in self.postfix.keys() & {"train_loss_step", "mr1", "mAP"}})
 
     def training_step(self, batch: BatchDict, batch_idx: int) -> Dict[str, float]:

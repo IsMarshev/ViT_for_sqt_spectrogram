@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader, Dataset
 from scipy.interpolate import interp1d
 
-from models.data_model import BatchDict
+from pretrain.data_model import BatchDict
 from utils import bcolors
 
 class CoverDataset(Dataset):
@@ -81,6 +81,19 @@ class CoverDataset(Dataset):
             masked_spectrogram[i:i + self.patch_size[0], j:j + self.patch_size[1]] = 0 
         return masked_spectrogram
     
+    def mask_image(self, spectrogram, mask_ratio=0.65):
+        H, W = spectrogram.shape
+        num_masked_pixels = int(mask_ratio * H * W)
+
+        mask_indices = np.random.permutation(H * W)[:num_masked_pixels]
+        mask = np.ones((H, W), dtype=spectrogram.dtype)
+
+        mask.flat[mask_indices] = 0
+        masked_spectrogram = spectrogram * mask
+
+        return masked_spectrogram
+    
+    
     
     def stretch_signal(self, spectrogram):
         num_rows, num_cols = spectrogram.shape
@@ -95,6 +108,8 @@ class CoverDataset(Dataset):
             stretched_spectrogram[i, :] = interpolator(new_time)
         
         return stretched_spectrogram
+
+
     def add_white_noise(self, signal):
         noise_level = np.random.uniform(0.05, 0.15)
         signal_mean = abs(signal.mean(1).mean(0))
@@ -109,7 +124,7 @@ class CoverDataset(Dataset):
 
         cqt_spectrogram = self.add_white_noise(cqt_spectrogram)
 
-        masked_spectrogram = self.mask_random_patches(cqt_spectrogram)     
+        masked_spectrogram = self.mask_image(cqt_spectrogram)     
 
         cqt_spectrogram = torch.tensor(cqt_spectrogram, dtype=torch.float32)
         masked_spectrogram = torch.tensor(masked_spectrogram, dtype=torch.float32) 
