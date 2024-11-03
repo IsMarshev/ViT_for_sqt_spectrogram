@@ -1,4 +1,4 @@
-from pretrain.train_module import TrainModule
+from classification.train_module import TrainModule
 from utils import initialize_logging, load_config
 
 config = load_config(config_path="./config/config.yaml")

@@ -19,9 +19,10 @@ train:
   shuffle: True
   drop_last: True
   epochs: 25
-  learning_rate: 0.0003
+  learning_rate: 0.00003
   patience: 4
-  log_steps: 10
+  save_path: "../models_chkpnt/train/"
+  log_steps: 1
 
 pretrain:
   dataset_path: "datasets/train/"
